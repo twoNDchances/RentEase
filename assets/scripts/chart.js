@@ -129,4 +129,4 @@ let configLineChart = {
         },
     },
 };
-const lineChart = new Chart(canvasElementForLineChart, configLineChart)
+const lineChart = new Chart(canvasElementForLineChart, configLineChart);
