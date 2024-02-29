@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Statistics page - RentEase</title>
+    <title>Hotel 1 - RentEase</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -163,7 +163,7 @@
                         <ul class="vertical-nav-menu">
                             <li class="app-sidebar__heading">Dashboards</li>
                             <li>
-                                <a href="main_statistics.html">
+                                <a href="main_statistics_page.html">
                                     <i class="metismenu-icon pe-7s-graph2"></i>
                                     Dashboard
                                 </a>
@@ -352,14 +352,22 @@
                                     <i class="pe-7s-users icon-gradient bg-mean-fruit">
                                     </i>
                                 </div>
-                                <div>Manage status for Hotel 1
-                                    <div class="page-title-subheading">
-                                        Customer booking information
+                                <div>Manage status of Hotel 1
+                                    <div class="page-title-subheading">This is an example dashboard created using
+                                        build-in elements and components.
                                     </div>
                                 </div>
                             </div>
+                            <div class="page-title-actions">
+                                <a href="#" class="btn-shadow btn btn-info">
+                                    <span class="btn-icon-wrapper pr-2 opacity-7">
+                                        <i class="fa fa-plus-circle fa-w-20"></i>
+                                    </span>
+                                    Add new Room
+                                </a>
+                            </div>
                         </div>
-                    </div> <!-- Short describe page end -->
+                    </div> <!-- Short describe end -->
                     <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
                         <li class="nav-item">
                             <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
@@ -414,17 +422,34 @@
                                                                     <div class="mb-2 mr-2 badge badge-primary">Using
                                                                     </div>
                                                                 </td>
-                                                                <td></td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Checkout">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check-circle"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">203</th>
                                                                 <td>Mark</td>
                                                                 <td>21/3/2024</td>
                                                                 <td>
-                                                                    <div class="mb-2 mr-2 badge badge-primary">Using
+                                                                    <div class="mb-2 mr-2 badge badge-primary">
+                                                                        Using
                                                                     </div>
                                                                 </td>
-                                                                <td></td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Checkout">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check-circle"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">202</th>
@@ -434,7 +459,14 @@
                                                                     <div class="mb-2 mr-2 badge badge-focus">Booked
                                                                     </div>
                                                                 </td>
-                                                                <td></td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Cancel">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-times-circle"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">201</th>
@@ -444,7 +476,14 @@
                                                                     <div class="mb-2 mr-2 badge badge-secondary">
                                                                         Checkouted</div>
                                                                 </td>
-                                                                <td></td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-info btn-sm"
+                                                                        title="Clean">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-history"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">302</th>
@@ -454,24 +493,423 @@
                                                                     <div class="mb-2 mr-2 badge badge-secondary">
                                                                         Checkouted</div>
                                                                 </td>
-                                                                <td></td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-info btn-sm"
+                                                                        title="Clean">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-history"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
                                                 <div class="tab-pane" id="tab-eg2-1" role="tabpanel">
-                                                    <p>Like Aldus PageMaker including versions of Lorem. It has survived
-                                                        not only five centuries, but also the leap into electronic
-                                                        typesetting, remaining
-                                                        essentially unchanged. </p>
+                                                    <table class="mb-0 table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Room</th>
+                                                                <th>Status</th>
+                                                                <th>View</th>
+                                                                <th>Actions</th>
+                                                                <th>Remove</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">303</th>
+                                                                <td>
+                                                                    <div class="mb-2 mr-2 badge badge-success">Available
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-focus btn-sm"
+                                                                        title="View">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-primary btn-sm"
+                                                                        title="Add">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-user-plus"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a href="#" class="btn-shadow btn btn-light btn-sm"
+                                                                        title="Disable">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-toggle-on"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Remove">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">204</th>
+                                                                <td>
+                                                                    <div class="mb-2 mr-2 badge badge-success">Available
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-focus btn-sm"
+                                                                        title="View">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-primary btn-sm"
+                                                                        title="Add">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-user-plus"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a href="#" class="btn-shadow btn btn-light btn-sm"
+                                                                        title="Disable">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-toggle-on"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Remove">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">205</th>
+                                                                <td>
+                                                                    <div class="mb-2 mr-2 badge badge-success">Available
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-focus btn-sm"
+                                                                        title="View">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-primary btn-sm"
+                                                                        title="Add">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-user-plus"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a href="#" class="btn-shadow btn btn-light btn-sm"
+                                                                        title="Disable">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-toggle-on"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Remove">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">206</th>
+                                                                <td>
+                                                                    <div class="mb-2 mr-2 badge badge-success">Available
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-focus btn-sm"
+                                                                        title="View">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-primary btn-sm"
+                                                                        title="Add">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-user-plus"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a href="#" class="btn-shadow btn btn-light btn-sm"
+                                                                        title="Disable">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-toggle-on"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Remove">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">304</th>
+                                                                <td>
+                                                                    <div class="mb-2 mr-2 badge badge-alternate">
+                                                                        Preparing</div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-focus btn-sm"
+                                                                        title="View">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-primary btn-sm disabled"
+                                                                        title="Add">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-user-plus"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a href="#" class="btn-shadow btn btn-dark btn-sm"
+                                                                        title="Disable">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-toggle-off"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Remove">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">305</th>
+                                                                <td>
+                                                                    <div class="mb-2 mr-2 badge badge-alternate">
+                                                                        Preparing</div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-focus btn-sm"
+                                                                        title="View">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-primary btn-sm disabled"
+                                                                        title="Add">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-user-plus"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a href="#" class="btn-shadow btn btn-dark btn-sm"
+                                                                        title="Disable">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-toggle-off"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Remove">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">306</th>
+                                                                <td>
+                                                                    <div class="mb-2 mr-2 badge badge-alternate">
+                                                                        Preparing</div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-focus btn-sm"
+                                                                        title="View">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-primary btn-sm disabled"
+                                                                        title="Add">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-user-plus"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a href="#" class="btn-shadow btn btn-dark btn-sm"
+                                                                        title="Disable">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-toggle-off"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="btn-shadow btn btn-danger btn-sm"
+                                                                        title="Remove">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                                 <div class="tab-pane" id="tab-eg2-2" role="tabpanel">
-                                                    <p>Lorem Ipsum has been the industry's standard dummy text ever
-                                                        since the 1500s, when an unknown printer took a galley of type
-                                                        and scrambled it to make a
-                                                        type specimen book. It has
-                                                        survived not only five centuries, but also the leap into
-                                                        electronic typesetting, remaining essentially unchanged. </p>
+                                                    <table class="mb-0 table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center">Room</th>
+                                                                <th class="text-center">Status</th>
+                                                                <th class="text-center">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th class="text-center" scope="row">307</th>
+                                                                <td class="text-center">
+                                                                    <div class="mb-2 mr-2 badge badge-info">Cleaning
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Done">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row">208</th>
+                                                                <td class="text-center">
+                                                                    <div class="mb-2 mr-2 badge badge-info">Cleaning
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Done">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row">209</th>
+                                                                <td class="text-center">
+                                                                    <div class="mb-2 mr-2 badge badge-info">Cleaning
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Done">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row">210</th>
+                                                                <td class="text-center">
+                                                                    <div class="mb-2 mr-2 badge badge-info">
+                                                                        Cleaning</div>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Done">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row">308</th>
+                                                                <td class="text-center">
+                                                                    <div class="mb-2 mr-2 badge badge-info">
+                                                                        Cleaning</div>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Done">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row">309</th>
+                                                                <td class="text-center">
+                                                                    <div class="mb-2 mr-2 badge badge-info">
+                                                                        Cleaning</div>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Done">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row">310</th>
+                                                                <td class="text-center">
+                                                                    <div class="mb-2 mr-2 badge badge-info">
+                                                                        Cleaning</div>
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="#"
+                                                                        class="btn-shadow btn btn-success btn-sm"
+                                                                        title="Done">
+                                                                        <span class="btn-icon-wrapper">
+                                                                            <i class="fa fa-check"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
@@ -480,7 +918,7 @@
                                 <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
                                     <div class="main-card mb-3 card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Grid</h5>
+                                            <h5 class="card-title">New Customer</h5>
                                             <form class="">
                                                 <div class="position-relative row form-group"><label for="exampleEmail"
                                                         class="col-sm-2 col-form-label">Email</label>
