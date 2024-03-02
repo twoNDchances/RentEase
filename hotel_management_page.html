@@ -1187,7 +1187,7 @@
                                 <div class="widget-content-wrapper text-white">
                                     <div class="widget-content-left">
                                         <div class="widget-heading">Figures</div>
-                                        <div class="widget-subheading">Compared with the previous month</div>
+                                        <div class="widget-subheading">Compared with last month</div>
                                     </div>
                                     <div class="widget-content-right">
                                         <div class="widget-numbers text-warning"><span>856/996</span></div>
@@ -1238,37 +1238,8 @@
         </div> <!-- App end -->
     </div> <!-- Main container end -->
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
-    <script src="assets/scripts/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('servicesTrendForHotel');
-
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Cuisine - Room Service', 'Restaurant', 'Swimming Pool', 'Laundry', 'More Beds'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [19, 12, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(249, 204, 118)',
-                        'rgba(0, 178, 191)',
-                        'rgba(34, 68, 51, 0.8)',
-                        'rgba(232, 78, 46, 0.5)',
-                        'rgba(239, 50, 98, 0.9)',
-                        'rgba(208, 227, 30, 0.6)',
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
+    <!-- <script src="assets/scripts/chart.js"></script> -->
+    <script src="assets/scripts/other_chart.js"></script>
 </body>
 
 </html>
