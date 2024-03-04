@@ -34,7 +34,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./assets/images/logo/rentease-favicon-color.png" width="30" height="30"
-                    class="d-inline-block align-top" alt="Logo" id="logo">
+                    class="d-inline-block align-top" alt="Logo" id="logoHeader">
                 RentEase
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -57,8 +57,8 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <button type="button" class="btn btn-dark" id="sign-in-button">Sign In</button>
-                    <button type="button" class="btn btn-outline-dark" id="sign-up-button">Sign Up</button>
+                    <a href="signin_page.html"><button type="button" class="btn btn-dark" id="sign-in-button">Sign In</button></a>
+                    <a href="signup_page.html"><button type="button" class="btn btn-outline-dark" id="sign-up-button">Sign Up</button></a>
                 </span>
             </div>
         </div>
@@ -73,14 +73,35 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="assets/images/homepage/hotel.jpeg"
                     style="width: 1100px; height: 500px; object-fit: cover;" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption text-right">
+                        <h1>Example headline.</h1>
+                        <p>Some representative placeholder content for the first slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="assets/images/homepage/homestay.jpg"
                     style="width: 1100px; height: 500px; object-fit: cover;" alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another example headline.</h1>
+                        <p>Some representative placeholder content for the second slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="assets/images/homepage/apartment.jpeg"
                     style="width: 1100px; height: 500px; object-fit: cover;" alt="Third slide">
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>One more for good measure.</h1>
+                        <p>Some representative placeholder content for the third slide of this carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    </div>
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
@@ -167,11 +188,12 @@
 
             <a href="welcome_page.html"
                 class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <img id="#logo" src="assets/images/logo/rentease-favicon-black.png" alt="" width="40" height="32">
+                <img id="logoFooter" src="assets/images/logo/rentease-favicon-black.png" alt="Logo" width="40"
+                    height="32">
             </a>
 
             <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="welcome_page.html" class="nav-link px-2 text-dark">Home</a></li>
+                <li class="nav-item"><a href="welcome_page.html" class="nav-link px-2 nav-footer">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
@@ -194,6 +216,7 @@
 
     <!-- Requirement Internal JavaScript files start -->
     <script src="assets/scripts/mode_switcher.js"></script>
+    <script type="module" src="assets/scripts/general_functions.js"></script>
     <!-- Requirement Internal JavaScript files end -->
 </body>
 
