@@ -2,17 +2,31 @@
 <html lang="en">
 
 <head>
+    <!-- Requirement tags start -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Statistics page - RentEase</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-    <link href="./main.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Requirement tags end -->
+
+    <!-- Essential tags start -->
+    <title>Statistics page - RentEase</title>
+    <link rel="shortcut icon" href="assets/images/logo/rentease-favicon-color.png" type="image/x-icon">
+    <!-- Essential tags end -->
+
+    <!-- Requirement Internal CSS files start -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/icon/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/icon/pe-icon-7-stroke/css/helper.css">
+    <!-- Requirement Internal CSS files end -->
+
+    <!-- Requirement Externet CSS files start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Requirement Externet CSS files end -->
 </head>
 
 <body>
@@ -695,8 +709,16 @@
             </div> <!-- Content -->
         </div> <!-- App end -->
     </div> <!-- Main container end -->
+
+    <!-- Requirement External JavaScript files start -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Requirement External JavaScript files end -->
+
+    <!-- Requirement Internal JavaScript files start -->
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
-    <script src="./assets/scripts/chart.js"></script>
+    <script type="module" src="./assets/scripts/chart/bar_chart_painter.js"></script>
+    <script type="module" src="./assets/scripts/chart/line_chart_painter.js"></script>
+    <!-- Requirement Internal JavaScript files end -->
 </body>
 
 </html>
