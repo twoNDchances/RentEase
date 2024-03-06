@@ -8,19 +8,7 @@
     width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-    .custom-background-light-image {
-        background-image: url('../images/signuppage/background_light.jpg');
-        height: 85vh;
-    }
-
-    .custom-background-dark-image {
-        background-image: url('../images/signuppage/background_dark.jpeg');
-        height: 85vh;
-    }
-}
-
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (max-height: 637px) {
     .custom-background-light-image {
         background-image: url('../images/signuppage/background_light.jpg');
         height: 100%;
@@ -32,8 +20,31 @@
     }
 }
 
+@media screen and (max-height: 637px) and (min-width: 768px) {
+    .custom-background-light-image {
+        background-image: url('../images/signuppage/background_light.jpg');
+        height: 100%;
+    }
 
-@media only screen and (max-height: 640px) {
+    .custom-background-dark-image {
+        background-image: url('../images/signuppage/background_dark.jpeg');
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-height: 638px) {
+    .custom-background-light-image {
+        background-image: url('../images/signuppage/background_light.jpg');
+        height: 100%;
+    }
+
+    .custom-background-dark-image {
+        background-image: url('../images/signuppage/background_dark.jpeg');
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-height: 638px) {
     .custom-background-light-image {
         background-image: url('../images/signuppage/background_light.jpg');
         height: 85vh;
@@ -45,7 +56,19 @@
     }
 }
 
-@media only screen and (min-height: 641px) {
+/* @media screen and (min-height: 641px) {
+    .custom-background-light-image {
+        background-image: url('../images/signuppage/background_light.jpg');
+        height: 85vh;
+    }
+
+    .custom-background-dark-image {
+        background-image: url('../images/signuppage/background_dark.jpeg');
+        height: 85vh;
+    }
+}
+
+@media screen and (max-height: 640px) {
     .custom-background-light-image {
         background-image: url('../images/signuppage/background_light.jpg');
         height: 100%;
@@ -55,4 +78,4 @@
         background-image: url('../images/signuppage/background_dark.jpeg');
         height: 100%;
     }
-}
+} */
