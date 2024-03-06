@@ -28,6 +28,31 @@
 
     .custom-background-dark-image {
         background-image: url('../images/signuppage/background_dark.jpeg');
-        height: 100%z;
+        height: 100%;
+    }
+}
+
+
+@media only screen and (max-height: 640px) {
+    .custom-background-light-image {
+        background-image: url('../images/signuppage/background_light.jpg');
+        height: 85vh;
+    }
+
+    .custom-background-dark-image {
+        background-image: url('../images/signuppage/background_dark.jpeg');
+        height: 85vh;
+    }
+}
+
+@media only screen and (min-height: 641px) {
+    .custom-background-light-image {
+        background-image: url('../images/signuppage/background_light.jpg');
+        height: 100%;
+    }
+
+    .custom-background-dark-image {
+        background-image: url('../images/signuppage/background_dark.jpeg');
+        height: 100%;
     }
 }

@@ -198,14 +198,12 @@ $(document).ready(() => {
         const getChildOfPassword = $('#showPassword').children();
         const getChildOfPasswordConfirmation = $('#showPasswordConfirmation').children();
         if (getChildOfPassword.first().hasClass('fa-eye') && getChildOfPasswordConfirmation.first().hasClass('fa-eye')) {
-            $('#password').attr('type', 'text');
-            $('#passwordConfirmation').attr('type', 'text');
+            $('#password, #passwordConfirmation').attr('type', 'text');
             getChildOfPassword.removeClass('fa-eye').addClass('fa-eye-slash');
             getChildOfPasswordConfirmation.removeClass('fa-eye').addClass('fa-eye-slash');
         }
         else {
-            $('#password').attr('type', 'password');
-            $('#passwordConfirmation').attr('type', 'password');
+            $('#password, #passwordConfirmation').attr('type', 'password');
             getChildOfPassword.removeClass('fa-eye-slash').addClass('fa-eye');
             getChildOfPasswordConfirmation.removeClass('fa-eye-slash').addClass('fa-eye');
         }
