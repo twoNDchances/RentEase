@@ -19,6 +19,7 @@
     <!-- Essential tags end -->
 
     <!-- Requirement Internal CSS files start -->
+    <link rel="stylesheet" href="assets/css/hotel_management_page.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
     <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/helper.css">
@@ -183,7 +184,7 @@
                         </button>
                     </span>
                 </div>
-                <div class="scrollbar-sidebar">
+                <div class="scrollbar-sidebar" id="custom-scroll-for-sidebar">
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
                             <li class="app-sidebar__heading">Dashboards</li>
@@ -355,6 +356,27 @@
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-settings"></i>
                                     Another branches
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Charts</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-graph2">
+                                    </i>ChartJS
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Charts</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-graph2">
+                                    </i>ChartJS
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Charts</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-graph2">
+                                    </i>ChartJS
                                 </a>
                             </li>
                             <li class="app-sidebar__heading">Charts</li>
@@ -1184,6 +1206,19 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="position-relative form-group">
+                                                            <label for="servicePrice" class="">Service Price</label>
+                                                            <div class="input-group"><input placeholder="Price"
+                                                                    type="number" class="form-control" id="servicePrice"
+                                                                    name="servicePrice" required>
+                                                                <div class="input-group-append"><span
+                                                                        class="input-group-text">VND</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-4">
+                                                        <div class="position-relative form-group">
                                                             <label for="totalExpenseService" class="">Total Expense for
                                                                 this Service</label>
                                                             <div class="input-group"><input placeholder="Expense"
@@ -1195,12 +1230,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="position-relative form-group">
-                                                    <label for="noteDetails" class="">Note Details
-                                                    </label>
-                                                    <textarea name="noteDetails" id="noteDetails"
-                                                        class="form-control">Electricity bill</textarea>
+                                                    <div class="col-md-8">
+                                                        <div class="position-relative form-group">
+                                                            <label for="noteDetails" class="">Note Details
+                                                            </label>
+                                                            <textarea name="noteDetails" id="noteDetails"
+                                                                class="form-control">Electricity bill, ...</textarea>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <input type="submit" class="mt-1 btn btn-primary" value="Add Service"
                                                     name="addService">
@@ -1253,43 +1290,6 @@
                         </div>
                     </div>
                 </div> <!-- Main content end-->
-                <div class="app-wrapper-footer">
-                    <div class="app-footer">
-                        <div class="app-footer__inner">
-                            <div class="app-footer-left">
-                                <ul class="nav">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Footer Link 1
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Footer Link 2
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="app-footer-right">
-                                <ul class="nav">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Footer Link 3
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <div class="badge badge-success mr-1 ml-0">
-                                                <small>NEW</small>
-                                            </div>
-                                            Footer Link 4
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- Footer end -->
             </div> <!-- Content -->
         </div> <!-- App end -->
     </div> <!-- Main container end -->
