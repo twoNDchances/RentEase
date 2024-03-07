@@ -171,6 +171,16 @@ $(document).ready(() => {
 
         if (length && capital && special && digit && same) {
             console.log('Mật khẩu hợp lệ');
+            if ($('#password').val() == $('#passwordConfirmation').val()) {
+                $('#confirm').text('✅Matches the password');
+                $('#confirm').css('color', 'green');
+                $('#input-button').removeAttr('disabled');
+            }
+            else {
+                $('#confirm').text('❌Matches the password');
+                $('#confirm').css('color', 'red');
+                $('#input-button').attr('disabled', true);
+            }
         }
     });
 

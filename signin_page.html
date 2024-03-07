@@ -1,27 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Required tags start -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Required tags end -->
+
+    <!-- Essential tags start -->
+    <title>Sign In page - RentEase</title>
+    <link rel="shortcut icon" href="assets/images/logo/rentease-favicon-color.png" type="image/x-icon">
+    <!-- Essential tags end -->
+
+    <!-- Required Internal CSS files start -->
+    <link rel="stylesheet" href="assets/css/signin_page.css">
+    <!-- Required Internal CSS files end -->
+
+    <!-- Required External CSS files start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Required External CSS files end -->
 </head>
 
-<body>
-    <div class="parent">
-        <p>Paragraph 1</p>
-        <p>Paragraph 2</p>
-        <div class="child">Child Div</div>
-        <p>Paragraph 3</p>
-    </div>
+<body">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="welcome_page.html">
+                    <img src="./assets/images/logo/rentease-favicon-color.png" width="30" height="30"
+                        class="d-inline-block align-top" alt="Logo" id="logoHeader">
+                    RentEase
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="welcome_page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <i class="nav-link" role="button" id="modeSwitcher"></i>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <a href="signin_page.html"><button type="button" class="btn btn-dark" id="sign-in-button">Sign
+                                In<span class="sr-only">(current)</span></button></a>
+                        <a href="signup_page.html"><button type="button" class="btn btn-outline-dark"
+                                id="sign-up-button">Sign Up</button></a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <main id="custom-main" class="custom-background-dark-image">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="card" id="input-form">
+                        <div class="card-header">
+                            <h4 class="card-title mt-2 text-center">Sign In</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary custom-social-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                        </svg>
+                                        Facebook
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-danger custom-social-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+                                        </svg>
+                                        Google
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <hr>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <strong>Or</strong>
+                                </div>
+                                <div class="col-md-5">
+                                    <hr>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="position-relative form-group"><label for="user">User</label><input
+                                        name="user" placeholder="Your Username, Gmail or Phone" type="text"
+                                        class="form-control" autofocus id="user" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <div class="input-group">
+                                        <input placeholder="Password" type="password" class="form-control"
+                                            name="password" id="password" required>
+                                        <div class="input-group-append">
+                                            <button class="input-group-text" type="button"
+                                                id="showPassword"><i class="fa fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn" id="input-button">Sign In</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <small class="float-right">
+                                            Forgot password? <a href="#">Change</a>
+                                        </small>
+                                        <br>
+                                        <small class="float-right ">No account? <a
+                                                href="signup_page.html">Sign
+                                                Up</a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container" id="content">
+        <hr class="featurette-divider">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+            <p class="col-md-4 mb-0">&copy; 2024 RentEase, Inc</p>
 
-    <script>
-        $(document).ready(function () {
-            var children = $(".parent").children(); // Tìm tất cả các thẻ con của thẻ có class là "parent"
-            console.log(children.eq(2).text()); // In ra các thẻ con được tìm thấy
-        });
-    </script>
-</body>
+            <a href="welcome_page.html"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img id="logoFooter" src="assets/images/logo/rentease-favicon-black.png" alt="Logo" width="40"
+                    height="32">
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="welcome_page.html" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- Requirement External JavaScript files start -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Requirement External JavaScript files end -->
+
+    <!-- Requirement Internal JavaScript files start -->
+    <script type="module" src="assets/scripts/pages/signin_page.js"></script>
+    <!-- Requirement Internal JavaScript files end -->
+    </body>
 
 </html>
