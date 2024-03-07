@@ -34,14 +34,24 @@ modeSwitcher(function () {
 $(document).ready(() => {
     // Show password
     $('#showPassword').click(() => {
-        const getShowPasswordButton = $('#showPassword');
-        if (getShowPasswordButton.children().first().hasClass('fa-eye')) {
-            getShowPasswordButton.children().first().removeClass('fa-eye').addClass('fa-eye-slash');
+        const getShowPasswordButton = $('#showPassword').children().first();
+        if (getShowPasswordButton.hasClass('fa-eye')) {
+            getShowPasswordButton.removeClass('fa-eye').addClass('fa-eye-slash');
             $('#password').attr('type', 'text');
         }
         else {
-            getShowPasswordButton.children().first().removeClass('fa-eye-slash').addClass('fa-eye');
+            getShowPasswordButton.removeClass('fa-eye-slash').addClass('fa-eye');
             $('#password').attr('type', 'password');
+        }
+    });
+
+    // Check input before sign in
+    $('#user, #password').on('input', () => {
+        if (($('#user').val().length != 0) && ($('#password').val().length != 0)) {
+            $('#input-button').removeAttr('disabled');
+        }
+        else {
+            $('#input-button').attr('disabled', true);
         }
     });
 });

@@ -12,7 +12,6 @@ modeSwitcher(function () {
         $('body').css('background-color', 'white');
         $('#content').css('color', 'black');
         $('hr').css('background-color', 'black');
-        $('.nav-footer').removeClass('text-light').addClass('text-dark');
     } else {
         $('#navbar').removeClass('navbar-light bg-light').addClass('navbar-dark bg-dark');
         $('#sign-in-button').removeClass('btn-dark').addClass('btn-light');
@@ -22,6 +21,5 @@ modeSwitcher(function () {
         $('body').css('background-color', '#383c40');
         $('#content').css('color', 'white');
         $('hr').css('background-color', 'white');
-        $('.nav-footer').removeClass('text-dark').addClass('text-light');
     }
 });
