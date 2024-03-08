@@ -4,7 +4,7 @@ import { getMode } from "../general_functions.js";
 modeSwitcher(function () {
     const currentMode = getMode();
     if (currentMode === 'light') {
-        $('#navbar').removeClass('navbar-dark bg-dark').addClass('navbar-light bg-light');
+        $('#navbar').removeClass('navbar-dark bg-dark border-bottom border-light').addClass('navbar-light bg-light  border-bottom border-dark');
         $('#sign-in-button').removeClass('btn-light').addClass('btn-dark');
         $('#sign-up-button').removeClass('btn-outline-light').addClass('btn-outline-dark');
         $('#modeSwitcher').html('<i class="fa fa-moon-o">Dark</i>');
@@ -15,7 +15,7 @@ modeSwitcher(function () {
         $('#free-pricing-card, #pro-pricing-card, #enterprise-pricing-card').css({ "background-color": "rgba(240,240,240)", "color": "black" });
     } 
     else {
-        $('#navbar').removeClass('navbar-light bg-light').addClass('navbar-dark bg-dark');
+        $('#navbar').removeClass('navbar-light bg-light border-bottom border-dark').addClass('navbar-dark bg-dark border-bottom border-light');
         $('#sign-in-button').removeClass('btn-dark').addClass('btn-light');
         $('#sign-up-button').removeClass('btn-outline-dark').addClass('btn-outline-light');
         $('#modeSwitcher').html('<i class="fa fa-sun-o">Light</i>');

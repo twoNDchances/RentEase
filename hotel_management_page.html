@@ -121,7 +121,8 @@
                                             <h6 tabindex="-1" class="dropdown-header">Header</h6>
                                             <button type="button" tabindex="0" class="dropdown-item">Actions</button>
                                             <div tabindex="-1" class="dropdown-divider"></div>
-                                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                                            <button type="button" tabindex="0" class="dropdown-item" id="signOut">Sign
+                                                Out</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1252,7 +1253,7 @@
                                         <div class="widget-subheading">Current month</div>
                                     </div>
                                     <div class="widget-content-right">
-                                        <div class="widget-numbers text-white"><span>856</span></div>
+                                        <div class="widget-numbers text-white"><span>$ 856</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -1291,11 +1292,13 @@
 
     <!-- Requirement External JavScript files start -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Requirement External JavaScript files end -->
 
     <!-- Requirement Internal JavScript files start -->
     <script type="text/javascript" src="assets/scripts/main.js"></script>
     <script type="module" src="assets/scripts/charts/pie_chart_painter.js"></script>
+    <script src="assets/scripts/pages/hotel_management_page.js"></script>
     <!-- Requirement Internal JavScript files end -->
 
 </body>
