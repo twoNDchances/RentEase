@@ -47,8 +47,16 @@ $(document).ready(() => {
 
     // Check input before sign in
     $('#user, #password').on('input', () => {
+        if ($('#message-alerting').text()) {
+            $('#message-alerting').text('');
+        }
         if (($('#user').val().length != 0) && ($('#password').val().length != 0)) {
             $('#input-button').removeAttr('disabled');
+            $('#password').on('keypress', (e) => {
+                if (e.which == 13) {
+                    $('#input-button').trigger('click');
+                }
+            });
         }
         else {
             $('#input-button').attr('disabled', true);
@@ -57,8 +65,17 @@ $(document).ready(() => {
 
     $('#input-button').click(() => {
         if (!($(this).attr('disabled'))) {
-            console.log('unlock')
-            document.location.href = 'main_statistics_page.html';
+            // console.log('unlock'); // debuging
+            const user = $('#user').val();
+            if (user == 'manager') {
+                document.location.href = 'main_statistics_page.html';
+            }
+            else if (user == 'staff') {
+
+            }
+            else {
+                $('#message-alerting').text('Your Account or Password is incorrect!').css('color', 'red');
+            }
         }
     });
 });

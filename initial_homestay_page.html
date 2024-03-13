@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Requirement tags start -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Requirement tags end -->
+
+    <!-- Essential tags start -->
+    <title>Initial page - RentEase</title>
+    <link rel="shortcut icon" href="assets/images/logo/rentease-favicon-color.png" type="image/x-icon">
+    <!-- Essential tags end -->
+
+    <!-- Requirement Internal CSS files start -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/helper.css">
+    <!-- Requirement Internal CSS files end -->
+
+    <!-- Requirement Externet CSS files start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Requirement Externet CSS files end -->
+</head>
+
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header fixed-footer">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <div class="logo-src"></div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div> <!-- Logo brand end -->
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div> <!-- Sidebar for mobile end -->
+            <div class="app-header__menu">
+                <span>
+                    <button type="button"
+                        class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div> <!-- Button open navbar for mobile end -->
+            <div class="app-header__content">
+                <div class="app-header-left">
+                    <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div>
+                    <ul class="header-menu nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-link-icon fa fa-database"></i>
+                                View Statistics
+                            </a>
+                        </li>
+                        <li class="btn-group nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-link-icon fa fa-home"></i>
+                                Add Apartments
+                            </a>
+                        </li>
+                        <li class="dropdown nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-link-icon fa fa-user"></i>
+                                Add Staffs
+                            </a>
+                        </li>
+                    </ul>
+                </div> <!-- Shortcut option end -->
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg"
+                                                alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu dropdown-menu-right">
+                                            <button type="button" tabindex="0" class="dropdown-item">User
+                                                Account</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
+                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                            <div tabindex="-1" class="dropdown-divider"></div>
+                                            <button type="button" tabindex="0" class="dropdown-item" id="signOut">Sign
+                                                Out</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+                                        Alina Mclourd
+                                    </div>
+                                    <div class="widget-subheading">
+                                        VP People Manager
+                                    </div>
+                                </div>
+                                <div class="widget-content-right header-user-info ml-3">
+                                    <button type="button"
+                                        class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- User info end -->
+            </div>
+        </div> <!-- Navbar end -->
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                                data-class="closed-sidebar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar" id="custom-scroll-for-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <li class="app-sidebar__heading">Main</li>
+                            <li>
+                                <a href="main_statistics_page.html">
+                                    <i class="metismenu-icon fa fa-database"></i>
+                                    View Statistics
+                                </a>
+                            </li>
+                            <li>
+                                <a href="add_apartments_page.html" class="mm-active">
+                                    <i class="metismenu-icon fa fa-home"></i>
+                                    Add Apartments
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon fa fa-user"></i>
+                                    Add Staffs
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Apartments</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Motel 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="homestay_management_page.html">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Homestay 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Apartment 3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Another branches
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Staffs</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Motel 1
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Hotel 2
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Apartment 3
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Another branches
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Services</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Motel 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Hotel 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Apartment 3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Another branches
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- Sidebar end -->
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="app-page-title">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-heading">
+                                <div class="page-title-icon">
+                                    <i class="pe-7s-plus icon-gradient bg-mean-fruit">
+                                    </i>
+                                </div>
+                                <div>Initial Homestay
+                                    <div class="page-title-subheading">
+                                        Please fill in the information below to create a Homestay rental property
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Short describe page end -->
+                    <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                        <li class="nav-item">
+                            <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
+                                <span>Form</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="tab" class="nav-link" id="tab-1" data-toggle="tab" href="#tab-content-1">
+                                <span>Preview your Licenses</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Grid Rows</h5>
+                                    <form class="">
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="position-relative form-group"><label for="exampleEmail11"
+                                                        class="">Email</label><input name="email" id="exampleEmail11"
+                                                        placeholder="with a placeholder" type="email"
+                                                        class="form-control"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="position-relative form-group"><label for="examplePassword11"
+                                                        class="">Password</label><input name="password"
+                                                        id="examplePassword11" placeholder="password placeholder"
+                                                        type="password" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="position-relative form-group"><label for="exampleAddress"
+                                                class="">Address</label><input name="address" id="exampleAddress"
+                                                placeholder="1234 Main St" type="text" class="form-control"></div>
+                                        <div class="position-relative form-group"><label for="exampleAddress2"
+                                                class="">Address 2</label><input name="address2" id="exampleAddress2"
+                                                placeholder="Apartment, studio, or floor" type="text"
+                                                class="form-control">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="position-relative form-group"><label for="exampleCity"
+                                                        class="">City</label><input name="city" id="exampleCity"
+                                                        type="text" class="form-control"></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="position-relative form-group"><label for="exampleState"
+                                                        class="">State</label><input name="state" id="exampleState"
+                                                        type="text" class="form-control"></div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="position-relative form-group"><label for="exampleZip"
+                                                        class="">Zip</label><input name="zip" id="exampleZip"
+                                                        type="text" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="position-relative form-check"><input name="check" id="exampleCheck"
+                                                type="checkbox" class="form-check-input"><label for="exampleCheck"
+                                                class="form-check-label">Check me out</label></div>
+                                        <button class="mt-2 btn btn-primary">Sign in</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="main-card mb-3 card">
+                                        <div class="card-body" style="object-fit: contain;">
+                                            <h5 class="card-title"><i class="fa fa-paperclip"></i> Business License
+                                                Preview</h5>
+                                            <object data="assets/images/initialhomestaypage/JD-OJT-Cyber-Security.pdf"
+                                                width="100%" height="1000px"></object>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="main-card mb-3 card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="fa fa-fire"></i> Fire Prevention License
+                                                Preview</h5>
+                                            <object data="assets/images/initialhomestaypage/JD-OJT-Cyber-Security.pdf"
+                                                width="100%" height="1000px"></object>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Main content end -->
+                </div> <!-- Content -->
+            </div> <!-- App end -->
+        </div> <!-- Main container end -->
+
+        <!-- Requirement External JavaScript files start -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Requirement External JavaScript files end -->
+
+        <!-- Requirement Internal JavaScript files start -->
+        <script type="text/javascript" src="./assets/scripts/main.js"></script>
+        <!-- Requirement Internal JavaScript files end -->
+</body>
+
+</html>

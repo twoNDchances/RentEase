@@ -11,19 +11,7 @@ let configBarChart = {
         labels: recentMonths,
         datasets: [
             {
-                label: 'Hotel 1',
-                data: [754, 493, 242, 996, 856,],
-                backgroundColor: [
-                    "rgba(249, 204, 118)",
-                    "rgba(249, 204, 118)",
-                    "rgba(249, 204, 118)",
-                    "rgba(249, 204, 118)",
-                    "rgba(249, 204, 118)",
-                ],
-                borderWidth: 2,
-            },
-            {
-                label: 'Homestay 2',
+                label: 'Motel  1',
                 data: [872, 991, 1345, 1532, 1286,],
                 backgroundColor: [
                     "rgba(0, 178, 191)",
@@ -31,6 +19,18 @@ let configBarChart = {
                     "rgba(0, 178, 191)",
                     "rgba(0, 178, 191)",
                     "rgba(0, 178, 191)",
+                ],
+                borderWidth: 2,
+            },
+            {
+                label: 'Homestay 2',
+                data: [754, 493, 242, 996, 856,],
+                backgroundColor: [
+                    "rgba(249, 204, 118)",
+                    "rgba(249, 204, 118)",
+                    "rgba(249, 204, 118)",
+                    "rgba(249, 204, 118)",
+                    "rgba(249, 204, 118)",
                 ],
                 borderWidth: 2,
             },

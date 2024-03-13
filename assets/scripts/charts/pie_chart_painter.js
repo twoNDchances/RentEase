@@ -3,7 +3,7 @@ const canvasElementForPieChart = document.getElementById('servicesTrendForHotel'
 let configPieChart = {
     type: 'pie',
     data: {
-        labels: ['Cuisine - Room Service', 'Restaurant', 'Swimming Pool', 'Laundry', 'More Beds'],
+        labels: ['Tourguide', 'Motorbike', 'Meal', 'Laundry', 'Health Care and Beauty'],
         datasets: [{
             label: '# of Votes',
             data: [19, 12, 3, 5, 2],
