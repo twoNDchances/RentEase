@@ -10,48 +10,48 @@
 
 @media screen and (max-width: 767px) and (max-height: 700px) {
     .custom-background-light-image {
-        background-image: url('../images/signuppage/background_light.jpg');
+        background-image: url('../images/signinpage/background_light.jpg');
         height: 100%;
     }
 
     .custom-background-dark-image {
-        background-image: url('../images/signuppage/background_dark.jpeg');
+        background-image: url('../images/signinpage/background_dark.jpg');
         height: 100%;
     }
 }
 
 @media screen and (min-width: 768px) and (max-height: 700px) {
     .custom-background-light-image {
-        background-image: url('../images/signuppage/background_light.jpg');
+        background-image: url('../images/signinpage/background_light.jpg');
         height: 100%;
     }
 
     .custom-background-dark-image {
-        background-image: url('../images/signuppage/background_dark.jpeg');
+        background-image: url('../images/signinpage/background_dark.jpg');
         height: 100%;
     }
 }
 
 @media screen and (max-width: 767px) and (min-height: 701px) {
     .custom-background-light-image {
-        background-image: url('../images/signuppage/background_light.jpg');
+        background-image: url('../images/signinpage/background_light.jpg');
         height: 100%;
     }
 
     .custom-background-dark-image {
-        background-image: url('../images/signuppage/background_dark.jpeg');
+        background-image: url('../images/signinpage/background_dark.jpg');
         height: 100%;
     }
 }
 
 @media screen and (min-width: 768px) and (min-height: 701px) {
     .custom-background-light-image {
-        background-image: url('../images/signuppage/background_light.jpg');
+        background-image: url('../images/signinpage/background_light.jpg');
         height: 85vh;
     }
 
     .custom-background-dark-image {
-        background-image: url('../images/signuppage/background_dark.jpeg');
+        background-image: url('../images/signinpage/background_dark.jpg');
         height: 85vh;
     }
 }
