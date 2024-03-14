@@ -11,17 +11,17 @@ let configLineChart = {
         labels: recentMonths,
         datasets: [
             {
-                label: 'Hotel 1: Cuisine - Room Service',
-                data: [20, 31, 25, 59, 36],
+                label: 'Motel 1: Interior',
+                data: [24, 11, 57, 81, 99],
                 fill: false,
-                borderColor: 'rgba(249, 204, 118)',
+                borderColor: 'rgba(0, 178, 191)',
                 tension: 0.5
             },
             {
                 label: 'Homestay 2: Tourguide',
-                data: [24, 11, 57, 81, 99],
+                data: [20, 31, 25, 59, 36],
                 fill: false,
-                borderColor: 'rgba(0, 178, 191)',
+                borderColor: 'rgba(249, 204, 118)',
                 tension: 0.5
             },
             {

@@ -11,6 +11,7 @@ modeSwitcher(function () {
         $('#logoHeader, #logoFooter').attr('src', './assets/images/logo/rentease-favicon-black.png');
         $('body').css('background-color', 'white');
         $('#content').css('color', 'black');
+        $('#details-motel-button-style, #details-hotel-button-style, #details-apartment-button-style').removeClass('btn-light').addClass('btn-secondary');
         $('hr').css('background-color', 'black');
     } else {
         $('#navbar').removeClass('navbar-light bg-light border-bottom border-dark').addClass('navbar-dark bg-dark border-bottom border-light');
@@ -20,6 +21,7 @@ modeSwitcher(function () {
         $('#logoHeader, #logoFooter').attr('src', './assets/images/logo/rentease-favicon-color.png');
         $('body').css('background-color', '#383c40');
         $('#content').css('color', 'white');
+        $('#details-motel-button-style, #details-hotel-button-style, #details-apartment-button-style').removeClass('btn-secondary').addClass('btn-light');
         $('hr').css('background-color', 'white');
     }
 });

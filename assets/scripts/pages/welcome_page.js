@@ -4,7 +4,7 @@ import { getMode } from "../general_functions.js";
 modeSwitcher(function () {
     const currentMode = getMode();
     if (currentMode === 'light') {
-        $('#navbar').removeClass('navbar-dark bg-dark border-bottom border-light').addClass('navbar-light bg-light  border-bottom border-dark');
+        $('#navbar').removeClass('navbar-dark bg-dark border-bottom border-light').addClass('navbar-light bg-light border-bottom border-dark');
         $('#sign-in-button').removeClass('btn-light').addClass('btn-dark');
         $('#sign-up-button').removeClass('btn-outline-light').addClass('btn-outline-dark');
         $('#modeSwitcher').html('<i class="fa fa-moon-o">Dark</i>');

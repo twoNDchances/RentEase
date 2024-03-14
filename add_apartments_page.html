@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Requirement tags start -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Requirement tags end -->
+
+    <!-- Essential tags start -->
+    <title>Base page - RentEase</title>
+    <link rel="shortcut icon" href="assets/images/logo/rentease-favicon-color.png" type="image/x-icon">
+    <!-- Essential tags end -->
+
+    <!-- Requirement Internal CSS files start -->
+    <link rel="stylesheet" href="assets/css/add_apartments_page.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/helper.css">
+    <!-- Requirement Internal CSS files end -->
+
+    <!-- Requirement Externet CSS files start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Requirement Externet CSS files end -->
+</head>
+
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header fixed-footer">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <div class="logo-src"></div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div> <!-- Logo brand end -->
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div> <!-- Sidebar for mobile end -->
+            <div class="app-header__menu">
+                <span>
+                    <button type="button"
+                        class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div> <!-- Button open navbar for mobile end -->
+            <div class="app-header__content">
+                <div class="app-header-left">
+                    <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div>
+                    <ul class="header-menu nav">
+                        <li class="nav-item">
+                            <a href="main_statistics_page.html" class="nav-link">
+                                <i class="nav-link-icon fa fa-database"></i>
+                                View Statistics
+                            </a>
+                        </li>
+                        <li class="btn-group nav-item">
+                            <a href="add_apartments_page.html" class="nav-link">
+                                <i class="nav-link-icon fa fa-home"></i>
+                                Add Apartments
+                            </a>
+                        </li>
+                        <li class="dropdown nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-link-icon fa fa-user"></i>
+                                Add Staffs
+                            </a>
+                        </li>
+                    </ul>
+                </div> <!-- Shortcut option end -->
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg"
+                                                alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu dropdown-menu-right">
+                                            <button type="button" tabindex="0" class="dropdown-item">User
+                                                Account</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
+                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                            <div tabindex="-1" class="dropdown-divider"></div>
+                                            <button type="button" tabindex="0" class="dropdown-item" id="signOut">Sign
+                                                Out</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+                                        Alina Mclourd
+                                    </div>
+                                    <div class="widget-subheading">
+                                        VP People Manager
+                                    </div>
+                                </div>
+                                <div class="widget-content-right header-user-info ml-3">
+                                    <button type="button"
+                                        class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- User info end -->
+            </div>
+        </div> <!-- Navbar end -->
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                                data-class="closed-sidebar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar" id="custom-scroll-for-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <li class="app-sidebar__heading">Main</li>
+                            <li>
+                                <a href="main_statistics_page.html">
+                                    <i class="metismenu-icon fa fa-database"></i>
+                                    View Statistics
+                                </a>
+                            </li>
+                            <li>
+                                <a href="add_apartments_page.html" class="mm-active">
+                                    <i class="metismenu-icon fa fa-home"></i>
+                                    Add Apartments
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon fa fa-user"></i>
+                                    Add Staffs
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Apartments</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Motel 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="homestay_management_page.html">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Homestay 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Apartment 3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-home"></i>
+                                    Another branches
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Staffs</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Motel 1
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Homestay 2
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Apartment 3
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon"></i>
+                                            Staff 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-user"></i>
+                                    Another branches
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Services</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Motel 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Homestay 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Apartment 3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>
+                                    Another branches
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- Sidebar end -->
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="app-page-title">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-heading">
+                                <div class="page-title-icon">
+                                    <i class="pe-7s-plus icon-gradient bg-mean-fruit">
+                                    </i>
+                                </div>
+                                <div>New Apartment
+                                    <div class="page-title-subheading">Choose a New Type of Apartment.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Short describe page end -->
+                    <div>
+                        <div class="row text-center">
+                            <div class="col-lg-4">
+                                <img class="bd-placeholder-img rounded-circle"
+                                    src="assets/images/addapartmentspage/motel.png" width="240" height="240"
+                                    alt="Motel Icon">
+                                <h1>Motel</h1>
+                                <p><a class="btn btn-warning" href="#" id="details-motel-button-style">Add
+                                        &raquo;</a></p>
+                            </div><!-- /.col-lg-4 -->
+                            <div class="col-lg-4">
+                                <img class="bd-placeholder-img rounded-circle"
+                                    src="assets/images/addapartmentspage/homestay.png" width="240" height="240"
+                                    alt="Homestay Icon">
+                                <h1>Homestay</h1>
+                                <p><a class="btn btn-info" href="initial_homestay_page.html"
+                                        id="details-hotel-button-style">Add
+                                        &raquo;</a></p>
+                            </div><!-- /.col-lg-4 -->
+                            <div class="col-lg-4">
+                                <img class="bd-placeholder-img rounded-circle"
+                                    src="assets/images/addapartmentspage/apartment.png" width="240" height="240"
+                                    alt="Apartment Icon">
+                                <h1>Apartment</h1>
+                                <p><a class="btn btn-success" href="#" id="details-apartment-button-style">Add
+                                        &raquo;</a>
+                                </p>
+                            </div><!-- /.col-lg-4 -->
+                        </div><!-- /.row -->
+                    </div>
+                </div> <!-- Main content end -->
+            </div> <!-- Content -->
+        </div> <!-- App end -->
+    </div> <!-- Main container end -->
+
+    <!-- Requirement External JavaScript files start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Requirement External JavaScript files end -->
+
+    <!-- Requirement Internal JavaScript files start -->
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <script src="assets/scripts/pages/add_apartments_page.js"></script>
+    <!-- Requirement Internal JavaScript files end -->
+</body>
+
+</html>
