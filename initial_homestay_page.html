@@ -19,6 +19,7 @@
     <!-- Essential tags end -->
 
     <!-- Requirement Internal CSS files start -->
+    <link rel="stylesheet" href="assets/css/initial_homestay_page.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
     <link rel="stylesheet" href="assets/css/icon/pe-icon-7-stroke/css/helper.css">
@@ -30,7 +31,7 @@
 </head>
 
 <body>
-    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header fixed-footer">
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
                 <div class="logo-src"></div>
@@ -75,13 +76,13 @@
                     </div>
                     <ul class="header-menu nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="main_statistics_page.html" class="nav-link">
                                 <i class="nav-link-icon fa fa-database"></i>
                                 View Statistics
                             </a>
                         </li>
                         <li class="btn-group nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="add_apartments_page.html" class="nav-link">
                                 <i class="nav-link-icon fa fa-home"></i>
                                 Add Apartments
                             </a>
@@ -372,107 +373,91 @@
                             </div>
                         </div>
                     </div> <!-- Short describe page end -->
-                    <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
-                        <li class="nav-item">
-                            <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
-                                <span>Form</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a role="tab" class="nav-link" id="tab-1" data-toggle="tab" href="#tab-content-1">
-                                <span>Preview your Licenses</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-                            <div class="main-card mb-3 card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Grid Rows</h5>
-                                    <form class="">
-                                        <div class="form-row">
-                                            <div class="col-md-6">
-                                                <div class="position-relative form-group"><label for="exampleEmail11"
-                                                        class="">Email</label><input name="email" id="exampleEmail11"
-                                                        placeholder="with a placeholder" type="email"
-                                                        class="form-control"></div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="position-relative form-group"><label for="examplePassword11"
-                                                        class="">Password</label><input name="password"
-                                                        id="examplePassword11" placeholder="password placeholder"
-                                                        type="password" class="form-control"></div>
+                    <main>
+                        <div class="main-card mb-3 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Form</h5>
+                                <form class="">
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="position-relative form-group">
+                                                <label for="name" class="">Name</label>
+                                                <input name="name" id="name" placeholder="Your Homestay Name"
+                                                    type="text" class="form-control" required autofocus>
                                             </div>
                                         </div>
-                                        <div class="position-relative form-group"><label for="exampleAddress"
-                                                class="">Address</label><input name="address" id="exampleAddress"
-                                                placeholder="1234 Main St" type="text" class="form-control"></div>
-                                        <div class="position-relative form-group"><label for="exampleAddress2"
-                                                class="">Address 2</label><input name="address2" id="exampleAddress2"
-                                                placeholder="Apartment, studio, or floor" type="text"
-                                                class="form-control">
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="col-md-6">
-                                                <div class="position-relative form-group"><label for="exampleCity"
-                                                        class="">City</label><input name="city" id="exampleCity"
-                                                        type="text" class="form-control"></div>
+                                        <div class="col-md-6">
+                                            <div class="position-relative form-group">
+                                                <label for="contact" class="">Contact</label>
+                                                <input name="contact" id="contact" placeholder="Phone Contact"
+                                                    type="text" class="form-control">
+                                                    <small class="form-text text-muted">Use default phone number
+                                                        when left blank.</small>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="position-relative form-group"><label for="exampleState"
-                                                        class="">State</label><input name="state" id="exampleState"
-                                                        type="text" class="form-control"></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="position-relative form-group"><label for="exampleZip"
-                                                        class="">Zip</label><input name="zip" id="exampleZip"
-                                                        type="text" class="form-control"></div>
-                                            </div>
-                                        </div>
-                                        <div class="position-relative form-check"><input name="check" id="exampleCheck"
-                                                type="checkbox" class="form-check-input"><label for="exampleCheck"
-                                                class="form-check-label">Check me out</label></div>
-                                        <button class="mt-2 btn btn-primary">Sign in</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="main-card mb-3 card">
-                                        <div class="card-body" style="object-fit: contain;">
-                                            <h5 class="card-title"><i class="fa fa-paperclip"></i> Business License
-                                                Preview</h5>
-                                            <object data="assets/images/initialhomestaypage/JD-OJT-Cyber-Security.pdf"
-                                                width="100%" height="1000px"></object>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="main-card mb-3 card">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><i class="fa fa-fire"></i> Fire Prevention License
-                                                Preview</h5>
-                                            <object data="assets/images/initialhomestaypage/JD-OJT-Cyber-Security.pdf"
-                                                width="100%" height="1000px"></object>
+                                    <div class="form-row">
+                                        <div class="col-md-3">
+                                            <div class="position-relative form-group">
+                                                <label for="address" class="">Address</label>
+                                                <input name="address" id="address" placeholder="Number, Address st."
+                                                    type="text" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="position-relative form-group"><label for="province"
+                                                    class="">Provinces</label>
+                                                <select class="form-control" name="province" id="province" required>
+                                                    <option value="-1">Chọn tỉnh thành</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="position-relative form-group"><label for="district"
+                                                    class="">District</label>
+                                                <select class="form-control" name="district" id="district" required>
+                                                    <option value="-1">Chọn quận/huyện</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="position-relative form-group"><label for="town"
+                                                    class="">Town</label>
+                                                <select class="form-control" name="town" id="town" required>
+                                                    <option value="-1">Chọn phường/xã</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="position-relative form-group"><label for="exampleText" class="">Text
+                                            Area</label><textarea name="text" id="exampleText"
+                                            class="form-control"></textarea></div>
+                                    <div class="position-relative form-group"><label for="exampleFile"
+                                            class="">File</label><input name="file" id="exampleFile" type="file"
+                                            class="form-control-file">
+                                        <small class="form-text text-muted">This is some placeholder block-level help
+                                            text for the above input. It's a bit lighter and easily wraps to a new
+                                            line.</small>
+                                    </div>
+                                    <button class="mt-1 btn btn-primary">Submit</button>
+                                </form>
                             </div>
                         </div>
-                    </div> <!-- Main content end -->
-                </div> <!-- Content -->
-            </div> <!-- App end -->
-        </div> <!-- Main container end -->
+                    </main>
+                </div> <!-- Main content end -->
+            </div> <!-- Content -->
+        </div> <!-- App end -->
+    </div> <!-- Main container end -->
 
-        <!-- Requirement External JavaScript files start -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- Requirement External JavaScript files end -->
+    <!-- Requirement External JavaScript files start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Requirement External JavaScript files end -->
 
-        <!-- Requirement Internal JavaScript files start -->
-        <script type="text/javascript" src="./assets/scripts/main.js"></script>
-        <!-- Requirement Internal JavaScript files end -->
+    <!-- Requirement Internal JavaScript files start -->
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <script src="assets/json/data.json"></script>
+    <script src="assets/scripts/pages/initial_homestay_page.js"></script>
+    <!-- Requirement Internal JavaScript files end -->
 </body>
 
 </html>
