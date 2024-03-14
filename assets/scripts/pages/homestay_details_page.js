@@ -2,25 +2,35 @@ $(document).ready(() => {
     $('#signOut').click(() => {
         document.location.href = 'welcome_page.html'
     });
-    
+
     $(function () {
         apiProvince = (prodvince) => {
             let district;
-    
+
             prodvince.forEach(element => {
-                $('#province').append(`<option value="${element.code}">${element.name}</option>`)
+                if (element.code == 48) {
+                    $('#province').append(`<option value="${element.code}" selected>${element.name}</option>`);
+                }
+                else {
+                    $('#province').append(`<option value="${element.code}">${element.name}</option>`);
+                }
             });
             $('#province').change(function () {
                 $('#district').html('<option value="-1">Chọn quận/huyện</option>')
+
                 $('#town').html('<option value = "-1"> Chọn phường/xã </option>')
                 let value = $(this).val();
                 $.each(prodvince, function (index, element) {
                     if (element.code == value) {
                         district = element.districts;
                         $.each(element.districts, function (index, element1) {
-                            $('#district').append(`<option value="${element1.code}">${element1.name}</option>`)
+                            if (element1.code == 494) {
+                                $('#district').append(`<option value="${element1.code} selected">${element1.name}</option>`)
+                            }
+                            else {
+                                $('#district').append(`<option value="${element1.code}">${element1.name}</option>`);
+                            }
                         });
-    
                     }
                 });
             });

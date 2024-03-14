@@ -374,73 +374,165 @@
                         </div>
                     </div> <!-- Short describe page end -->
                     <main>
-                        <div class="main-card mb-3 card">
-                            <div class="card-body">
-                                <h5 class="card-title">Form</h5>
-                                <form class="">
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="position-relative form-group">
-                                                <label for="name" class="">Name</label>
-                                                <input name="name" id="name" placeholder="Your Homestay Name"
-                                                    type="text" class="form-control" required autofocus>
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main-card mb-3 card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Form</h5>
+                                        <form class="" enctype="multipart/form-data">
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="position-relative form-group">
+                                                        <label for="name" class="">Name</label>
+                                                        <input name="name" id="name" placeholder="Your Homestay Name"
+                                                            type="text" class="form-control" required autofocus>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="position-relative form-group">
+                                                        <label for="contact" class="">Contact</label>
+                                                        <input name="contact" id="contact" placeholder="Phone Contact"
+                                                            type="text" class="form-control">
+                                                        <small class="form-text text-muted">Use default phone number
+                                                            when left blank.</small>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
+                                            <div class="form-row">
+                                                <div class="col-md-3">
+                                                    <div class="position-relative form-group">
+                                                        <label for="address" class="">Address</label>
+                                                        <input name="address" id="address"
+                                                            placeholder="Number, Address st." type="text"
+                                                            class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="position-relative form-group"><label for="province"
+                                                            class="">Provinces</label>
+                                                        <select class="form-control" name="province" id="province"
+                                                            required>
+                                                            <option value="-1">Chọn tỉnh thành</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="position-relative form-group"><label for="district"
+                                                            class="">District</label>
+                                                        <select class="form-control" name="district" id="district"
+                                                            required>
+                                                            <option value="-1">Chọn quận/huyện</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="position-relative form-group"><label for="town"
+                                                            class="">Town</label>
+                                                        <select class="form-control" name="town" id="town" required>
+                                                            <option value="-1">Chọn phường/xã</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="position-relative form-group">
-                                                <label for="contact" class="">Contact</label>
-                                                <input name="contact" id="contact" placeholder="Phone Contact"
-                                                    type="text" class="form-control">
-                                                    <small class="form-text text-muted">Use default phone number
-                                                        when left blank.</small>
+                                                <label for="description" class="">Description</label>
+                                                <textarea name="description" id="description" class="form-control"
+                                                    placeholder="Some introducing..." required></textarea>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-5">
+                                                    <div class="position-relative form-group">
+                                                        <label for="frontSideOfBusinessLicense" class="">Front Side of
+                                                            Business
+                                                            Lincense</label>
+                                                        <input name="frontSideOfBusinessLicense"
+                                                            id="frontSideOfBusinessLicense" type="file"
+                                                            class="form-control-file" accept=".jpg, .png, .jpeg"
+                                                            required>
+                                                        <small class="form-text text-muted">Required</small>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="position-relative form-group">
+                                                        <label for="backSideOfBusinessLicense" class="">Back Side of
+                                                            Business
+                                                            License</label>
+                                                        <input name="backSideOfBusinessLicense"
+                                                            id="backSideOfBusinessLicense" type="file"
+                                                            class="form-control-file" accept=".jpg, .png, .jpeg">
+                                                        <small class="form-text text-muted">Optional</small>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="position-relative form-group">
+                                                        <label for="otherLicense1" class="">Other license</label>
+                                                        <input name="otherLicense1" id="otherLicense1" type="file"
+                                                            class="form-control-file" accept=".jpg, .png, .jpeg">
+                                                        <small class="form-text text-muted">Optional</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="position-relative form-group">
+                                                        <label for="frontSideOfFirePreventionLicense" class="">Front
+                                                            Side of
+                                                            Fire Prevention License</label>
+                                                        <input name="frontSideOfFirePreventionLicense"
+                                                            id="frontSideOfFirePreventionLicense" type="file"
+                                                            class="form-control-file" accept=".jpg, .png, .jpeg"
+                                                            required>
+                                                        <small class="form-text text-muted">Required</small>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="position-relative form-group">
+                                                        <label for="backSideOfFirePreventionLicense" class="">Back Side
+                                                            of Fire
+                                                            Prevention License</label>
+                                                        <input name="backSideOfFirePreventionLicense"
+                                                            id="backSideOfFirePreventionLicense" type="file"
+                                                            class="form-control-file" accept=".jpg, .png, .jpeg">
+                                                        <small class="form-text text-muted">Optional</small>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="position-relative form-group">
+                                                        <label for="otherLicense2" class="">Other license</label>
+                                                        <input name="otherLicense2" id="otherLicense2" type="file"
+                                                            class="form-control-file" accept=".jpg, .png, .jpeg">
+                                                        <small class="form-text text-muted">Optional</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="mt-1 btn-lg btn btn-primary"
+                                                id="initial-button">Initial</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="fa fa-paperclip"></i> Business License
+                                                    Preview
+                                                </h5>
+                                                <img src="#" alt="" id="frontSideOfBusinessLicensePreview" width="100%">
+                                                <img src="#" alt="" id="backSideOfBusinessLicensePreview" width="100%">
+                                                <img src="#" alt="" id="otherLicense1Preview" width="100%">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="col-md-3">
-                                            <div class="position-relative form-group">
-                                                <label for="address" class="">Address</label>
-                                                <input name="address" id="address" placeholder="Number, Address st."
-                                                    type="text" class="form-control" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="position-relative form-group"><label for="province"
-                                                    class="">Provinces</label>
-                                                <select class="form-control" name="province" id="province" required>
-                                                    <option value="-1">Chọn tỉnh thành</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="position-relative form-group"><label for="district"
-                                                    class="">District</label>
-                                                <select class="form-control" name="district" id="district" required>
-                                                    <option value="-1">Chọn quận/huyện</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="position-relative form-group"><label for="town"
-                                                    class="">Town</label>
-                                                <select class="form-control" name="town" id="town" required>
-                                                    <option value="-1">Chọn phường/xã</option>
-                                                </select>
+                                    <div class="col-md-6">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="fa fa-fire"></i> Fire Prevention
+                                                    License Preview</h5>
+                                                <img src="#" alt="" id="frontSideOfFirePreventionPreview" width="100%">
+                                                <img src="#" alt="" id="backSideOfFirePreventionPreview" width="100%">
+                                                <img src="#" alt="" id="otherLicense2Preview" width="100%">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="position-relative form-group"><label for="exampleText" class="">Text
-                                            Area</label><textarea name="text" id="exampleText"
-                                            class="form-control"></textarea></div>
-                                    <div class="position-relative form-group"><label for="exampleFile"
-                                            class="">File</label><input name="file" id="exampleFile" type="file"
-                                            class="form-control-file">
-                                        <small class="form-text text-muted">This is some placeholder block-level help
-                                            text for the above input. It's a bit lighter and easily wraps to a new
-                                            line.</small>
-                                    </div>
-                                    <button class="mt-1 btn btn-primary">Submit</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </main>
@@ -456,7 +548,8 @@
     <!-- Requirement Internal JavaScript files start -->
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
     <script src="assets/json/data.json"></script>
-    <script src="assets/scripts/pages/initial_homestay_page.js"></script>
+    <script src="assets/scripts/pages/initial_homestay_1_page.js"></script>
+    <script type="module" src="assets/scripts/pages/initial_homestay_2_page.js"></script>
     <!-- Requirement Internal JavaScript files end -->
 </body>
 

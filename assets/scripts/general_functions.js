@@ -41,3 +41,19 @@ export function modeSwitcher(applyMode) {
         $('#modeSwitcher').click(toggleMode);
     });
 }
+
+// Image previewer
+export function imagePreviewer(photoLoaderID, imageLoaderID) {
+    const photoInp = $(photoLoaderID);
+    let file;
+    photoInp.change(function () {
+        file = this.files[0];
+        if (file) {
+            let reader = new FileReader();
+            reader.onload = function (event) {
+                $(imageLoaderID).attr("src", event.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+}
