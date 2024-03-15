@@ -374,8 +374,20 @@
                         </div>
                     </div> <!-- Short describe page end -->
                     <main>
-                        <div class="row">
-                            <div class="col-lg-5">
+                        <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                            <li class="nav-item">
+                                <a role="tab" class="nav-link active" data-toggle="tab" href="#tab-new-branch">
+                                    <span>New Branch</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a role="tab" class="nav-link" data-toggle="tab" href="#tab-preview-licenses">
+                                    <span>Preview Licenses</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane tabs-animation fade show active" id="tab-new-branch" role="tabpanel">
                                 <div class="main-card mb-3 card">
                                     <div class="card-body">
                                         <h5 class="card-title">Form</h5>
@@ -507,7 +519,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-7">
+                            <div class="tab-pane tabs-animation fade" id="tab-preview-licenses" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="main-card mb-3 card">

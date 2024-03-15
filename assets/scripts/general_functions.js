@@ -57,3 +57,12 @@ export function imagePreviewer(photoLoaderID, imageLoaderID) {
         }
     });
 }
+
+// Center element alignmenter
+export function centerElementVertically(selector) {
+    var windowHeight = $(window).height();
+    var elementHeight = $(selector).outerHeight();
+    var topPosition = (windowHeight - elementHeight) / 2;
+
+    $(selector).css('top', topPosition + 'px');
+}
