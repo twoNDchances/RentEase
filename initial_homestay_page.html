@@ -391,16 +391,24 @@
                                 <div class="main-card mb-3 card">
                                     <div class="card-body">
                                         <h5 class="card-title">Form</h5>
-                                        <form class="" enctype="multipart/form-data">
+                                        <form class="" enctype="multipart/form-data" id="initial-form">
                                             <div class="form-row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 text-center">
+                                                    <div class="position-relative form-group">
+                                                        <label for="logo-brand" class="circle-label"></label>
+                                                        <input name="logo" id="logo-brand" type="file"
+                                                            class="circle-input" required>
+                                                        <span class="circle-text">Logo</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
                                                     <div class="position-relative form-group">
                                                         <label for="name" class="">Name</label>
                                                         <input name="name" id="name" placeholder="Your Homestay Name"
                                                             type="text" class="form-control" required autofocus>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
                                                     <div class="position-relative form-group">
                                                         <label for="contact" class="">Contact</label>
                                                         <input name="contact" id="contact" placeholder="Phone Contact"
@@ -559,7 +567,7 @@
 
     <!-- Requirement Internal JavaScript files start -->
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
-    <script src="assets/json/data.json"></script>
+    <script src="assets/json/data.js"></script>
     <script src="assets/scripts/pages/initial_homestay_1_page.js"></script>
     <script type="module" src="assets/scripts/pages/initial_homestay_2_page.js"></script>
     <!-- Requirement Internal JavaScript files end -->

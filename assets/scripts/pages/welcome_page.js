@@ -36,10 +36,23 @@ $(document).ready(() => {
 
     $(window).on('resize', function () {
         let newHeight = window.innerHeight;
+        let generaNewlHeightElement = 0;
 
         let newHeightElement1 = $('#caption-1').outerHeight();
         let newHeightElement2 = $('#caption-2').outerHeight();
         let newHeightElement3 = $('#caption-3').outerHeight();
+
+        if (newHeightElement1 != 0) {
+            generaNewlHeightElement = newHeightElement1;
+        }
+        if (newHeightElement2 != 0) {
+            generaNewlHeightElement = newHeightElement2;
+        }
+        if (newHeightElement3 != 0) {
+            generaNewlHeightElement = newHeightElement3;
+        }
+
+        // Debugging
         // console.log('---------------------------------------------');
         // console.log('Chiều cao cũ của màn hình: ' + previousHeight);
         // console.log('Chiều cao mới của màn hình: ' + newHeight);
@@ -50,9 +63,9 @@ $(document).ready(() => {
         // console.log('Chiều cao đã qua tính toán: ' + (newHeight - newHeightElement1) / 2 + 'px' + ', ' + (newHeight - newHeightElement2) / 2 + 'px' + ', ' + (newHeight - newHeightElement3) / 2 + 'px');
         // console.log('---------------------------------------------');
         if (newHeight !== previousHeight) {
-            let calculateTop1 = (newHeight - newHeightElement1) / 2;
-            let calculateTop2 = (newHeight - newHeightElement2) / 2;
-            let calculateTop3 = (newHeight - newHeightElement3) / 2;
+            let calculateTop1 = (newHeight - generaNewlHeightElement) / 2;
+            let calculateTop2 = (newHeight - generaNewlHeightElement) / 2;
+            let calculateTop3 = (newHeight - generaNewlHeightElement) / 2;
 
             $('#caption-1').css('top', calculateTop1 + 'px');
             $('#caption-2').css('top', calculateTop2 + 'px');

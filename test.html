@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Select Boxes</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <select id="firstSelect" disabled>
+        <option value="">Chọn mảng 1</option>
+        <option value="0">Mảng 1 - Phần tử 1</option>
+        <option value="1" selected>Mảng 1 - Phần tử 2</option>
+        <option value="2">Mảng 1 - Phần tử 3</option>
+    </select>
+
+    <select id="secondSelect" disabled>
+        <option value="">Chọn mảng 2</option>
+    </select>
+
+    <select id="thirdSelect" disabled>
+        <option value="">Chọn mảng 3</option>
+    </select>
+
+    <button id="enableSelects">Enable Select Boxes</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#enableSelects').on('click', function () {
+                if ($('#firstSelect, #secondSelect, #thirdSelect').attr('disabled') !== undefined) {
+                    $('#firstSelect, #secondSelect, #thirdSelect').removeAttr('disabled');
+                }
+                else {
+                    $('#firstSelect, #secondSelect, #thirdSelect').attr('disabled', 'true');
+                }
+            });
+
+            $('#firstSelect').on('input', function () {
+                var selectedValue = $(this).val();
+                if (selectedValue) {
+                    $('#secondSelect').empty().append('<option value="">Chọn mảng 2</option>');
+                    $('#thirdSelect').empty().append('<option value="">Chọn mảng 3</option>');
+                }
+
+                if (selectedValue !== '') {
+                    for (var i = 0; i < 3; i++) {
+                        $('#secondSelect').append('<option value="' + i + '">Mảng 2 - Phần tử ' + (i + 1) + '</option>');
+                    }
+                }
+            });
+
+            $('#secondSelect').on('input', function () {
+                var selectedValue = $(this).val();
+                $('#thirdSelect').empty().append('<option value="">Chọn mảng 3</option>');
+
+                if (selectedValue !== '') {
+                    for (var i = 0; i < 3; i++) {
+                        $('#thirdSelect').append('<option value="' + i + '">Mảng 3 - Phần tử ' + (i + 1) + '</option>');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

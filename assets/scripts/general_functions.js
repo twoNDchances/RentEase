@@ -43,7 +43,7 @@ export function modeSwitcher(applyMode) {
 }
 
 // Image previewer
-export function imagePreviewer(photoLoaderID, imageLoaderID) {
+export function imagePreviewer(photoLoaderID, imageLoaderID, attrType) {
     const photoInp = $(photoLoaderID);
     let file;
     photoInp.change(function () {
@@ -51,18 +51,15 @@ export function imagePreviewer(photoLoaderID, imageLoaderID) {
         if (file) {
             let reader = new FileReader();
             reader.onload = function (event) {
-                $(imageLoaderID).attr("src", event.target.result);
+                let imageURL = event.target.result;
+                if (attrType === 'HTML') {
+                    $(imageLoaderID).attr("src", imageURL);
+                }
+                else if (attrType === 'CSS') {
+                    $(imageLoaderID).css('background-image', 'url(' + imageURL + ')');
+                }
             };
             reader.readAsDataURL(file);
         }
     });
-}
-
-// Center element alignmenter
-export function centerElementVertically(selector) {
-    var windowHeight = $(window).height();
-    var elementHeight = $(selector).outerHeight();
-    var topPosition = (windowHeight - elementHeight) / 2;
-
-    $(selector).css('top', topPosition + 'px');
 }

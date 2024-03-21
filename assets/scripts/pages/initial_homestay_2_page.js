@@ -1,8 +1,9 @@
 import { imagePreviewer } from "../general_functions.js";
 
-imagePreviewer('#frontSideOfBusinessLicense', '#frontSideOfBusinessLicensePreview');
-imagePreviewer('#backSideOfBusinessLicense', '#backSideOfBusinessLicensePreview');
-imagePreviewer('#otherLicense1', '#otherLicense1Preview');
-imagePreviewer('#frontSideOfFirePreventionLicense', '#frontSideOfFirePreventionPreview');
-imagePreviewer('#backSideOfFirePreventionLicense', '#backSideOfFirePreventionPreview');
-imagePreviewer('#otherLicense2', '#otherLicense2Preview');
+imagePreviewer('#frontSideOfBusinessLicense', '#frontSideOfBusinessLicensePreview', 'HTML');
+imagePreviewer('#backSideOfBusinessLicense', '#backSideOfBusinessLicensePreview', 'HTML');
+imagePreviewer('#otherLicense1', '#otherLicense1Preview', 'HTML');
+imagePreviewer('#frontSideOfFirePreventionLicense', '#frontSideOfFirePreventionPreview', 'HTML');
+imagePreviewer('#backSideOfFirePreventionLicense', '#backSideOfFirePreventionPreview', 'HTML');
+imagePreviewer('#otherLicense2', '#otherLicense2Preview', 'HTML');
+imagePreviewer('#logo-brand', '.circle-label', 'CSS');

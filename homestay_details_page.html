@@ -26,6 +26,7 @@
 
     <!-- Requirement Externet CSS files start -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!-- Requirement Externet CSS files end -->
 </head>
 
@@ -416,8 +417,17 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="main-card mb-3 card">
+                                        <div class="card-header-tab card-header">
+                                            <h5 class="card-title"></h5>
+                                            About Homestay 2
+                                            <div class="btn-actions-pane-right">
+                                                <div class="nav">
+                                                    <button class="btn btn-outline-primary"
+                                                        id="updateButton">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="card-body">
-                                            <h5 class="card-title">About Homestay 2</h5>
                                             <form class="" enctype="multipart/form-data">
                                                 <div class="form-row">
                                                     <div class="col-md-6">
@@ -455,8 +465,8 @@
                                                         <div class="position-relative form-group"><label for="province"
                                                                 class="">Provinces</label>
                                                             <select class="form-control" name="province" id="province"
-                                                                required>
-                                                                <option value="-1" selected>Chọn tỉnh thành</option>
+                                                                required disabled>
+                                                                <option value="-1">Chọn tỉnh thành</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -464,7 +474,7 @@
                                                         <div class="position-relative form-group"><label for="district"
                                                                 class="">District</label>
                                                             <select class="form-control" name="district" id="district"
-                                                                required>
+                                                                required disabled>
                                                                 <option value="-1">Chọn quận/huyện</option>
                                                             </select>
                                                         </div>
@@ -472,7 +482,8 @@
                                                     <div class="col-md-3">
                                                         <div class="position-relative form-group"><label for="town"
                                                                 class="">Town</label>
-                                                            <select class="form-control" name="town" id="town" required>
+                                                            <select class="form-control" name="town" id="town" required
+                                                                disabled>
                                                                 <option value="-1">Chọn phường/xã</option>
                                                             </select>
                                                         </div>
@@ -547,11 +558,12 @@
 
     <!-- Requirement External JavaScript files start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Requirement External JavaScript files end -->
 
     <!-- Requirement Internal JavaScript files start -->
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
-    <script src="assets/json/data.json"></script>
+    <script src="assets/json/data.js"></script>
     <script src="assets/scripts/pages/homestay_details_page.js"></script>
     <!-- Requirement Internal JavaScript files end -->
 </body>
