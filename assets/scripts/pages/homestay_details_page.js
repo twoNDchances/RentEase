@@ -1,47 +1,114 @@
+import { notificator } from "../private_general_functions.js";
+
 $(document).ready(() => {
     $('#signOut').click(() => {
         document.location.href = 'welcome_page.html'
     });
+    const vietnamData = JSON.parse(data);
+    const provinceNumber = 48; //Đà Nẵng
+    const districtNumber = 494; //Ngũ Hành Sơn
+    const townNumber = 20290; //Hòa Hải
 
-    function jsonProcessor(data, target) {
-        const getEntries = target.split('.');
-        if (getEntries[0] === 'true') {
-            let provinces = [];
-            for (let index = 0; index < data.length; index++) {
-                const real_data = data[index].name;
-                provinces.push(data[index].code + '.' + real_data);
-            }
-            return provinces;
+    function setDefaultValue() {
+        listProvinces(vietnamData, provinceNumber);
+        listDistricts(vietnamData, provinceNumber, districtNumber);
+        listTowns(vietnamData, provinceNumber, districtNumber, townNumber);
+    }
+
+    function listProvinces(data, defaultValue = -1) {
+        let province = $('#province');
+        if (province.val() == '-1') {
+            province.empty();
+            province.append('<option value="-1">Chọn tỉnh thành</option>');
         }
-        if (getEntries[0] !== 'null' && getEntries[1] === 'true') {
-            let districts = [];
+        if (defaultValue != -1) {
             for (let index = 0; index < data.length; index++) {
-                const city = data[index].name;
-                if (city.includes(getEntries[0])) {
-                    const districtsOfCity = data[index].districts;
-                    for (let jndex = 0; jndex < districtsOfCity.length; jndex++) {
-                        const real_data = districtsOfCity[jndex].name;
-                        districts.push(districtsOfCity[jndex].code + '.' + real_data);
-                    }
-                    return districts;
+                const element = data[index];
+                if (element.code == defaultValue) {
+                    province.append(`<option value="${element.code}" selected>${element.name}</option>`);
+                }
+                else {
+                    province.append(`<option value="${element.code}">${element.name}</option>`);
                 }
             }
         }
-        if (getEntries[0] !== 'null' && getEntries[1] !== 'null' && getEntries[2] === 'true') {
-            let wards = [];
+        else {
             for (let index = 0; index < data.length; index++) {
-                const city = data[index].name;
-                if (city.includes(getEntries[0])) {
-                    const districtsOfCity = data[index].districts;
-                    for (let jndex = 0; jndex < districtsOfCity.length; jndex++) {
-                        const district = districtsOfCity[jndex].name;
-                        if (district.includes(getEntries[1])) {
-                            const wardsOfDistrict = districtsOfCity[jndex].wards;
-                            for (let yndex = 0; yndex < wardsOfDistrict.length; yndex++) {
-                                const real_data = wardsOfDistrict[yndex].name;
-                                wards.push(wardsOfDistrict[yndex].code + '.' + real_data);
+                const element = data[index];
+                province.append(`<option value="${element.code}">${element.name}</option>`);
+            }
+        }
+    }
+
+    function listDistricts(data, provinceCode, defaultValue = -1) {
+        let district = $('#district');
+        district.empty();
+        district.append('<option value="-1">Chọn quận/huyện</option>');
+        if (defaultValue != -1) {
+            for (let index = 0; index < data.length; index++) {
+                const provinceElement = data[index];
+                if (provinceElement.code == provinceCode) {
+                    for (let jndex = 0; jndex < provinceElement.districts.length; jndex++) {
+                        const districtElement = provinceElement.districts[jndex];
+                        if (districtElement.code == defaultValue) {
+                            district.append(`<option value="${districtElement.code}" selected>${districtElement.name}</option>`);
+                        }
+                        else {
+                            district.append(`<option value="${districtElement.code}">${districtElement.name}</option>`);
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            for (let index = 0; index < data.length; index++) {
+                const provinceElement = data[index];
+                if (provinceElement.code == provinceCode) {
+                    for (let jndex = 0; jndex < provinceElement.districts.length; jndex++) {
+                        const districtElement = provinceElement.districts[jndex];
+                        district.append(`<option value="${districtElement.code}">${districtElement.name}</option>`);
+                    }
+                }
+            }
+        }
+    }
+
+    function listTowns(data, provinceCode, districtCode, defaultValue = -1) {
+        let town = $('#town');
+        town.empty();
+        town.append('<option value="-1">Chọn phường/xã</option>');
+        if (defaultValue != -1) {
+            for (let index = 0; index < data.length; index++) {
+                const provinceElement = data[index];
+                if (provinceElement.code == provinceCode) {
+                    for (let jndex = 0; jndex < provinceElement.districts.length; jndex++) {
+                        const districtElement = provinceElement.districts[jndex];
+                        if (districtElement.code == districtCode) {
+                            for (let yndex = 0; yndex < districtElement.wards.length; yndex++) {
+                                const wardElement = districtElement.wards[yndex];
+                                if (wardElement.code == defaultValue) {
+                                    town.append(`<option value="${wardElement.code}" selected>${wardElement.name}</option>`);
+                                }
+                                else {
+                                    town.append(`<option value="${wardElement.code}">${wardElement.name}</option>`);
+                                }
                             }
-                            return wards;
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            for (let index = 0; index < data.length; index++) {
+                const provinceElement = data[index];
+                if (provinceElement.code == provinceCode) {
+                    for (let jndex = 0; jndex < provinceElement.districts.length; jndex++) {
+                        const districtElement = provinceElement.districts[jndex];
+                        if (districtElement.code == districtCode) {
+                            for (let yndex = 0; yndex < districtElement.wards.length; yndex++) {
+                                const wardElement = districtElement.wards[yndex];
+                                town.append(`<option value="${wardElement.code}">${wardElement.name}</option>`);
+                            }
                         }
                     }
                 }
@@ -49,101 +116,102 @@ $(document).ready(() => {
         }
     }
 
-    function setDefaultValue() {
-        let vietnamData = JSON.parse(data);
-        const prodvinceDefault = 'Đà Nẵng';
-        const districtDefault = 'Ngũ Hành Sơn';
-        const wardDefault = 'Hoà Hải';
+    function setNewValue() {
+        let provinceValue = null;
+        let districtValue = null;
+        let townValue = null;
 
-        const city = jsonProcessor(vietnamData, 'true.null.null');
-        for (let index = 0; index < city.length; index++) {
-            const element = city[index];
-            if (element.includes(prodvinceDefault)) {
-                $('#province').append(`<option value="${element.split('.')[0]}" selected>${element.split('.')[1]}</option>`);
+        let district = $('#district');
+        let town = $('#town');
+
+        let currentProvinceValue = $('#province').val();
+        let currentDistrictValue = $('#district').val();
+
+        //Detect when change Town
+        $('#town').change(function () {
+            let townSelectedValue = $('#town').val();
+            townValue = townSelectedValue;
+        });
+
+        //Detect when change District
+        $('#district').change(() => {
+            let districtSelectedValue = $('#district').val();
+            if (districtSelectedValue == '-1') {
+                districtValue = null;
+                town.empty();
+                town.append('<option value="-1">Chọn phường/xã</option>');
             }
             else {
-                $('#province').append(`<option value="${element.split('.')[0]}">${element.split('.')[1]}</option>`);
+                districtValue = districtSelectedValue;
             }
-        }
 
-        let provinceOptions = $('#province').find('option');
-        const district = jsonProcessor(vietnamData, `${prodvinceDefault}.true.null`);
-        for (let index = 0; index < provinceOptions.length; index++) {
-            const elementProvince = provinceOptions[index];
-            if (elementProvince.innerHTML.includes(prodvinceDefault)) {
-                for (let jndex = 0; jndex < district.length; jndex++) {
-                    const elementDistrict = district[jndex];
-                    if (elementDistrict.split('.')[1].includes(districtDefault)) {
-                        $('#district').append(`<option value="${elementDistrict.split('.')[0]}" selected>${elementDistrict.split('.')[1]}</option>`);
+            if (districtSelectedValue != '-1' && $('#town').val() != '-1') {
+                town.empty();
+                town.append('<option value="-1">Chọn phường/xã</option>');
+                districtValue = districtSelectedValue;
+            }
+
+            if (districtValue != null) {
+                listTowns(vietnamData, currentProvinceValue, districtValue);
+                $('#town').change(function () {
+                    let townSelectedValue = $('#town').val();
+                    townValue = townSelectedValue;
+                });
+            }
+        });
+
+        //Detect when change Province
+        $('#province').change(function () {
+            let provinceSelectedValue = $(this).val();
+            if (provinceSelectedValue == '-1') {
+                provinceValue = null;
+                district.empty();
+                district.append('<option value="-1">Chọn quận/huyện</option>');
+                town.empty();
+                town.append('<option value="-1">Chọn phường/xã</option>');
+            }
+            else {
+                provinceValue = provinceSelectedValue;
+            }
+
+            if (provinceSelectedValue != '-1' && $('#town').val() != '-1') {
+                district.empty();
+                district.append('<option value="-1">Chọn quận/huyện</option>');
+                town.empty();
+                town.append('<option value="-1">Chọn phường/xã</option>');
+                provinceValue = provinceSelectedValue;
+            }
+
+            if (provinceValue != null) {
+                listDistricts(vietnamData, provinceValue);
+                $('#district').change(function () {
+                    let districtSelectedValue = $('#district').val();
+                    if (districtSelectedValue == '-1') {
+                        districtValue = null;
+                        town.empty();
+                        town.append('<option value="-1">Chọn phường/xã</option>');
                     }
                     else {
-                        $('#district').append(`<option value="${elementDistrict.split('.')[0]}">${elementDistrict.split('.')[1]}</option>`);
+                        districtValue = districtSelectedValue;
                     }
-                }
-            }
-        }
 
-        let districtOptions = $('#district').find('option');
-        const ward = jsonProcessor(vietnamData, `${prodvinceDefault}.${districtDefault}.true`);
-        for (let index = 0; index < districtOptions.length; index++) {
-            const elementDistrict = districtOptions[index];
-            if (elementDistrict.innerHTML.includes(districtDefault)) {
-                for (let jndex = 0; jndex < ward.length; jndex++) {
-                    const elementWard = ward[jndex];
-                    if (elementWard.split('.')[1].includes(wardDefault)) {
-                        $('#town').append(`<option value="${elementWard.split('.')[0]}" selected>${elementWard.split('.')[1]}</option>`);
+                    if (districtSelectedValue != '-1' && $('#town').val() != '-1') {
+                        town.empty();
+                        town.append('<option value="-1">Chọn phường/xã</option>');
+                        districtValue = districtSelectedValue;
                     }
-                    else {
-                        $('#town').append(`<option value="${elementWard.split('.')[0]}">${elementWard.split('.')[1]}</option>`);
-                    }
-                }
-            }
-        }
-    }
 
-    function setNewValue() {
-        apiProvince = (prodvince) => {
-            let district;
-
-            prodvince.forEach(element => {
-                $('#province').append(`<option value="${element.code}">${element.name}</option>`)
-            });
-            $('#province').change(function () {
-                $('#district').html('<option value="-1">Chọn quận/huyện</option>')
-                $('#town').html('<option value = "-1"> Chọn phường/xã </option>')
-                let value = $(this).val();
-                $.each(prodvince, function (index, element) {
-                    if (element.code == value) {
-                        district = element.districts;
-                        $.each(element.districts, function (index, element1) {
-                            $('#district').append(`<option value="${element1.code}">${element1.name}</option>`)
+                    if (districtValue != null) {
+                        listTowns(vietnamData, provinceValue, districtValue);
+                        $('#town').change(function () {
+                            let townSelectedValue = $('#town').val();
+                            townValue = townSelectedValue;
                         });
                     }
                 });
-            });
-            $('#district').change(function () {
-                $('#town').html('<option value = "-1"> Chọn phường/xã </option>')
-                let value = $(this).val();
-                $.each(district, function (index, element) {
-                    if (element.code == value) {
-                        element.wards.forEach(element1 => {
-                            $('#town').append(`<option value="${element1.code}">${element1.name}</option>`)
-                        });
-                    }
-                });
-            });
-        };
-        prodvince = JSON.parse(data);
-        apiProvince(prodvince);
+            }
+        });
     }
-
-    function resetCurrentValue() {
-        $('#province, #district, #town').empty();
-        $('#province').append('<option value="-1">Chọn tỉnh thành</option>');
-        $('#district').append('<option value="-1">Chọn quận/huyện</option>');
-        $('#town').append('<option value = "-1"> Chọn phường/xã </option>');
-    }
-
 
     setDefaultValue();
 
@@ -152,25 +220,18 @@ $(document).ready(() => {
             $('#updateButton').text('Confirm');
             $('#updateButton').removeClass('btn-outline-primary').addClass('btn-outline-alternate');
             $('#name, #contact, #address, #province, #district, #town').removeAttr('disabled');
-            resetCurrentValue();
+            // resetCurrentValue();
             setNewValue();
         }
         else {
-            if (($('#province').val() === '-1') && ($('#district').val() === '-1') && ($('#town').val() === '-1')) {
-                toastr.options.closeMethod = 'fadeOut';
-                toastr.options.closeDuration = 300;
-                toastr.options.closeEasing = 'swing';
-                toastr.options.timeOut = 2000;
-                toastr.options.showMethod = 'slideDown';
-                // toastr.options.hideMethod = 'slideUp';
-                toastr.options.closeMethod = 'slideUp';
-                toastr.options.preventDuplicates = true;
-                toastr.error('Vui lòng chọn địa chỉ của chi nhánh.', 'Lỗi!');
+            if (($('#province').val() == '-1') || ($('#district').val() == '-1') || ($('#town').val() == '-1')) {
+                notificator('Lỗi!', 'Vui lòng nhập địa chỉ', 'error');
             }
             else {
                 $('#updateButton').removeClass('btn-outline-alternate').addClass('btn-outline-primary');
                 $('#updateButton').text('Update');
                 $('#name, #contact, #address, #province, #district, #town').attr('disabled', 'true');
+                console.log('Updated: ', $('#address').val(), $('#province').val(), $('#district').val(), $('#town').val());
             }
         }
     });

@@ -40,26 +40,4 @@ $(document).ready(() => {
         apiProvince(prodvince);
     });
 
-    const form = document.getElementById('initial-form');
-    const submitter = document.getElementById('initial-button');
-    const formData = new FormData(form, submitter);
-    for (const [key, value] of formData) {
-        console.log(`${key}: ${value}\n`);
-    }
-    const para = new URLSearchParams(formData);
-    console.log(para.toString());
-    // changerMonitor('#province');
 });
-
-// function changerMonitor(field) {
-//     $(field).on('input', () => {
-//         if ($(field).val()) {
-//             console.log('true');
-//             return true;
-//         }
-//         else {
-//             console.log('false');
-//             return false;
-//         }
-//     });
-// }

@@ -1,5 +1,5 @@
-import { modeSwitcher } from "../general_functions.js";
-import { getMode } from "../general_functions.js";
+import { modeSwitcher } from "../public_general_functions.js";
+import { getMode } from "../public_general_functions.js";
 
 modeSwitcher(function () {
     const currentMode = getMode();

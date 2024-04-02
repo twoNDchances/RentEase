@@ -1,5 +1,5 @@
-import { modeSwitcher } from "../general_functions.js";
-import { getMode } from "../general_functions.js";
+import { modeSwitcher } from "../public_general_functions.js";
+import { getMode } from "../public_general_functions.js";
 
 modeSwitcher(function () {
     const currentMode = getMode();
@@ -13,7 +13,7 @@ modeSwitcher(function () {
         $('#content').css('color', 'black');
         $('hr').css('background-color', 'black');
         $('#free-pricing-card, #pro-pricing-card, #enterprise-pricing-card').css({ "background-color": "rgba(240,240,240)", "color": "black" });
-    } 
+    }
     else {
         $('#navbar').removeClass('navbar-light bg-light').addClass('navbar-dark bg-dark');
         $('#sign-in-button').removeClass('btn-dark').addClass('btn-light');

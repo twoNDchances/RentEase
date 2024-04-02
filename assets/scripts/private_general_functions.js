@@ -14,34 +14,6 @@ export function getAbbreviatedMonthNames(startDate) {
     return months;
 }
 
-// Mode switcher
-export function getMode() {
-    return localStorage.getItem('mode');
-}
-
-export function modeSwitcher(applyMode) {
-    $(document).ready(function () {
-        function setMode(mode) {
-            localStorage.setItem('mode', mode);
-        }
-
-        function toggleMode() {
-            let currentMode = getMode();
-            if (currentMode === 'light') {
-                setMode('dark');
-            } else {
-                setMode('light');
-            }
-            applyMode();
-        }
-        if (!getMode()) {
-            setMode('light');
-        }
-        applyMode();
-        $('#modeSwitcher').click(toggleMode);
-    });
-}
-
 // Image previewer
 export function imagePreviewer(photoLoaderID, imageLoaderID, attrType) {
     const photoInp = $(photoLoaderID);
@@ -62,4 +34,27 @@ export function imagePreviewer(photoLoaderID, imageLoaderID, attrType) {
             reader.readAsDataURL(file);
         }
     });
+}
+
+// Notificator
+export function notificator(title, message, type) {
+    toastr.options.closeMethod = 'fadeOut';
+    toastr.options.closeDuration = 300;
+    toastr.options.closeEasing = 'swing';
+    toastr.options.timeOut = 2000;
+    toastr.options.showMethod = 'slideDown';
+    toastr.options.hideMethod = 'slideUp';
+    toastr.options.preventDuplicates = true;
+    if (type == 'info') {
+        toastr.info(message, title);
+    }
+    if (type == 'success') {
+        toastr.success(message, title);
+    }
+    if (type == 'warning') {
+        toastr.warning(message, title);
+    }
+    if (type == 'error') {
+        toastr.error(message, title);
+    }
 }

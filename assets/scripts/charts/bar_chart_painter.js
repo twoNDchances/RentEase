@@ -1,4 +1,4 @@
-import { getAbbreviatedMonthNames } from "../general_functions.js";
+import { getAbbreviatedMonthNames } from "../private_general_functions.js";
 
 let startDate = new Date(2023, 1, 14);
 let abbreviatedMonthNames = getAbbreviatedMonthNames(startDate);

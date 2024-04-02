@@ -1,4 +1,4 @@
-import { imagePreviewer } from "../general_functions.js";
+import { imagePreviewer } from "../private_general_functions.js";
 
 imagePreviewer('#frontSideOfBusinessLicense', '#frontSideOfBusinessLicensePreview', 'HTML');
 imagePreviewer('#backSideOfBusinessLicense', '#backSideOfBusinessLicensePreview', 'HTML');
